@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expresion</title>
+</head>
+
+<body>
+
+
+    <script>
+        /*Написати функцію, яка
+
+Приймає своїм аргументом строку
+Визначає, чи є строка повним варіантом телефонного номеру
+Якщо строка є номером телефону повернути локалізований номер телефону в форматі 0…решта цифр
+Якщо строка не є валідним номером телефону, функція має повернути null
+Доступні формати номеру телефону
+
+380 44 364 83 65
+
++380 44 364 83 65
+
+380-44-364-83-65
+
++380-44-364-83-65
+
+Приклад застосування (назва функціі - на ваш розум)*/
+
+        const user = prompt("Can you write your mobile number?");
+
+        function Phone(user) {
+            const regularPhone = /^(\+?\d{3}|\d{3})(\s|-)\d{2}(\s|-)\d{3}(\s|-)\d{2}(\s|-)\d{2}/
+            if (!regularPhone.test(user)) {
+                return alert("It doesn`t match to phone system");
+            }
+            return alert("Thanks a lot!");
+        }
+
+        Phone(user);
+    </script>
+</body>
+
+</html>
